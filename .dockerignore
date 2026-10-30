@@ -1,0 +1,8 @@
+.git
+node_modules
+frontend/node_modules
+data
+web
+系统备份
+*.tar.gz
+*.zip

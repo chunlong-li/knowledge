@@ -1,0 +1,19 @@
+name: build
+on:
+  workflow_dispatch:
+  push:
+    tags: ['v*']
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with: { go-version: '1.24' }
+      - run: sudo apt-get update && sudo apt-get install -y musl-tools
+      - run: cd frontend && npm ci && npm run build
+      - run: |
+          CGO_ENABLED=1 CC=musl-gcc go build -tags sqlite_fts5 -trimpath \
+            -ldflags "-linkmode external -extldflags -static -s -w" -o knowledge .
+      - uses: actions/upload-artifact@v4
+        with: { name: knowledge-linux-amd64, path: knowledge }

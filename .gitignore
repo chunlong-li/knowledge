@@ -1,0 +1,36 @@
+# data / build artifacts
+data/
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+*.fpk
+*.tar.gz
+*.zip
+frontend/node_modules/
+frontend/dist/
+node_modules/
+dist/
+.env
+*.env
+*.bak
+*.bak-*
+*.log
+bridge-token.txt
+docs/bridge-token.txt
+安装包/
+*.update.tar.gz
+# local secret
+*.pem
+*.key
+*.p12
+系统备份/
+docs/TO-*.md
+*.bak*
+*.bak-*
+
+# 内部协作文档 / 构建产物（不进开源仓库）
+AGENTS.md
+SECURITY-CLEANUP.md
+GITHUB-PREP.md
+/knowledge
