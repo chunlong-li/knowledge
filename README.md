@@ -85,4 +85,6 @@ CGO_ENABLED=1 CC=musl-gcc go build -tags sqlite_fts5 -trimpath \
 
 ## 许可证
 
-候选：`LICENSE-MIT` / `LICENSE-AGPL-3.0`，由项目所有者最终选择。
+本项目采用 **MIT** 许可证，详见 [LICENSE](LICENSE)。
+
+> 说明：赞助二维码为开发者本人所有，二次开发者请自行替换。
